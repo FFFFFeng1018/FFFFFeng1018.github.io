@@ -11156,30 +11156,86 @@ body {
   color: #7c6655 !important;
 }
 
+/* 1. 精選作品大區塊背景與內邊距 */
 .projects-section {
-  padding: 10rem 0;
+  background-color: #fffaf4 !important;
+  padding: 8rem 0 !important;
 }
-.projects-section .featured-text {
-  padding: 2rem;
+
+/* 2. 修正頂部置中文字框的樣式與邊框線 */
+.featured-text {
+  background-color: #fff6eb !important;
+  border-radius: 0.5rem;
+  padding: 2.5rem !important;
+  box-shadow: 0 4px 15px rgba(74, 60, 49, 0.05);
+  border-left: 0.5rem solid #e57c38 !important; /* 質感深橘色左裝飾線 */
+  text-align: left; /* 讓文字在框內靠左更好看 */
 }
-@media (min-width: 992px) {
-  .projects-section .featured-text {
-    padding: 0 0 0 2rem;
-    border-left: 0.5rem solid #e57c38;
-  }
+
+/* 3. 九宮格單一圖片卡片基礎設定（強制 1:1 正方形或完美比例） */
+.gallery-card {
+  width: 100%;
+  height: 320px; /* 每張圖片的高度，可依喜好微調 */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  border-radius: 0.8rem; /* 好看的圓角 */
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(74, 60, 49, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-.projects-section .project-text {
-  padding: 3rem;
-  font-size: 90%;
+
+/* 滑鼠移過去微放大，看起來超高級 */
+.gallery-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(74, 60, 49, 0.12);
 }
-@media (min-width: 992px) {
-  .projects-section .project-text {
-    padding: 5rem;
-  }
+
+/* 4. 🔗 核心：讓文字底框絕對定位，緊緊漂浮在圖片下緣 */
+.gallery-text-bottom {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  /* 帶有模糊感的微透明深色濾鏡，確保無論底圖多亮，白字都清晰 */
+  background: linear-gradient(to top, rgba(56, 45, 37, 0.85) 0%, rgba(56, 45, 37, 0.6) 100%);
+  padding: 1.5rem !important;
+  text-align: left; /* 文字靠左排版 */
+}
+
+/* 5. 下緣浮動文字的顏色與大小 */
+.gallery-text-bottom h4 {
+  color: #ffffff !important;
+  font-weight: 700;
+  font-size: 1.25rem;
+  margin-bottom: 0.4rem;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.gallery-text-bottom p {
+  color: rgba(255, 255, 255, 0.85) !important;
+  font-size: 0.85rem;
+  line-height: 1.4;
+  margin-bottom: 0 !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
 }
 .projects-section.bg-light,
 #projects {
   background-color: #fff6eb !important;
+}
+.bg-custom-project {
+  background-color: #ffe6cc !important;
+  height: 100%;
+}
+.featured-text h4,
+.bg-custom-project h4 {
+  color: #4a3c31 !important;
+  font-weight: 600;
+}
+.featured-text p,
+.bg-custom-project p {
+  color: #7c6655 !important;
 }
 .featured-text {
   background-color: #fff6eb !important;
@@ -11247,7 +11303,7 @@ body {
 }
 .contact-section .card {
   border: 0;
-  border-bottom: 0.25rem solid #64a19d;
+  border-bottom: 0.25rem solid #e57c38;
 }
 .contact-section .card h4, .contact-section .card .h4 {
   font-size: 0.8rem;
@@ -11257,9 +11313,18 @@ body {
 }
 .contact-section .card hr {
   opacity: 1;
-  border-color: #64a19d;
+  border-color: #e57c38;
   border-width: 0.25rem;
   width: 3rem;
+}
+.contact-section i,
+.contact-section .svg-inline--fa {
+  color: #e57c38 !important;
+}
+.contact-section a,
+.contact-section .card-body a {
+  color: #e57c38 !important;
+  text-decoration: none;
 }
 .contact-section .social {
   margin-top: 5rem;
