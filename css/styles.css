@@ -11077,6 +11077,17 @@ body {
   background-attachment: scroll;
   background-size: cover;
 }
+.masthead::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 150px;
+  background: linear-gradient(to top, #fff6eb 0%, rgba(255, 255, 255, 0) 100%);
+  pointer-events: none;
+  z-index: 1;
+}
 .masthead h1, .masthead .h1 {
   font-family: "Varela Round", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: 2.5rem;
@@ -11175,26 +11186,64 @@ body {
 }
 
 .signup-section {
+  position: relative;
   padding: 10rem 0;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.5) 75%, #000 100%), url("../assets/img/bg-signup.jpg");
+  background: linear-gradient(to bottom, #fff6eb 0%, rgba(255, 255, 255, 0) 40%), url("../assets/img/bg-masthead.png");
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-size: cover;
 }
+.signup-section::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 150px;
+  background: linear-gradient(to top, #fff6eb 0%, rgba(255, 255, 255, 0) 100%);
+  pointer-events: none;
+  z-index: 1;
+}
+.signup-section .container {
+  position: relative;
+  z-index: 2;
+}
+.signup-section h2,
+.signup-section p,
+.signup-section h1 {
+  color: #ffffff !important;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
 .signup-section .form-signup input {
-  box-shadow: 0 0.1875rem 0.1875rem 0 rgba(0, 0, 0, 0.1) !important;
+  box-shadow: 0 0.1875rem 0.1875rem 0 rgba(0, 0, 0, 0.05) !important;
   padding: 1.25rem 2rem;
   height: auto;
   font-family: "Varela Round", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: 80%;
   text-transform: uppercase;
   letter-spacing: 0.15rem;
-  border: 0;
+  border: 1px solid #ffe6cc;
+}
+.signup-section .btn {
+  background-color: #e57c38 !important;
+  border-color: #e57c38 !important;
+  color: #ffffff !important;
+  font-weight: 600;
+}
+.signup-section .btn:hover {
+  background-color: #cc6624 !important;
+  border-color: #cc6624 !important;
+  color: #ffffff !important;
+}
+.signup-section .btn:active, .signup-section .btn:focus {
+  background-color: #b2531a !important;
+  border-color: #b2531a !important;
 }
 
 .contact-section {
-  padding-top: 5rem;
+  background-color: #fff6eb !important;
+  padding: 5rem 0 0 0 !important;
 }
 .contact-section .card {
   border: 0;
